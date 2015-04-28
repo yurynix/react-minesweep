@@ -1,0 +1,35 @@
+$boardBorder: 2px solid black;
+$cellSize: 50px;
+
+.gameBoard {
+    float: left;
+
+    &.disabled {
+        background-color: black;
+
+        .row {
+            background-color: black;
+
+            .cell {
+                border: 2px solid white;
+            }
+        }
+    }
+
+    .row {
+        background-color: grey;
+        height: $cellSize;
+
+        .cell {
+            border: $boardBorder;
+            text-align: center;
+            width: $cellSize;
+            height: $cellSize;
+            font-size: $cellSize / 2;
+            overflow: hidden;
+            display: inline-block;
+
+        }
+    }
+
+}
